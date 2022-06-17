@@ -1,7 +1,7 @@
 # ERC20
 Creation of ERC20 Contract steps  and forms.
 Creation of ERC20 Contract steps  and forms.
-Demo-token-1 
+Demo-token-1 Deployed 
 <br>Transaction deployed 
 https://ropsten.etherscan.io/tx/0x88c1dfefdfd65971c87a02f559e73b02ad9115347a4ff43d17717274255279bb
 <br>Contract deployed link
