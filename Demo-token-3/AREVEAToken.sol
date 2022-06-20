@@ -42,8 +42,8 @@ contract AREVEAToken is Context,IERC20,Ownable,ReentrancyGuard,Pausable {
     mapping (address => mapping (address => uint256)) private _allowances;
     
     address private _owner;
-    uint256 private _initialSupply = 1000;
-    uint256 private _totalSupply= 1000000000000;
+    uint256 private _initialSupply = 1000; // It is initial supply of currency 
+    uint256 private _totalSupply= 1000000000000; // it is Total amount of supply in circulation
     
     string public _name ;
     string public _symbol;
@@ -53,7 +53,7 @@ contract AREVEAToken is Context,IERC20,Ownable,ReentrancyGuard,Pausable {
     
     constructor()  {
         
-        _name = "AREVEA";
+        _name = "AREVEA"; 
         _symbol ="AVA";
         _decimals = 18;
         _totalSupply =   _initialSupply + (_totalSupply * (10 ** uint256(_decimals)));
