@@ -7,7 +7,7 @@ import "./SafeMath.sol";
 import "./ReentrancyGuard.sol";
 import "./Context.sol";
 import "./Ownable.sol";
-// import "./Pausable.sol";
+import "./Pausable.sol";
 import "./ERC20.sol";
 
 /**
@@ -43,9 +43,12 @@ contract AREVEAToken is ERC20,Ownable{
     mapping (address => mapping (address => uint256)) private _allowances;
     
     address private _owner;
-    uint256 private _initialSupply = 100;
+    //uint256 private _initialSupply = 1000000 ;
     uint256 private _totalSupply= 1000;
-    uint256 constant _maximusupply = 10000;
+    uint8 public constant DECIMALS = 0;
+    uint256 public constant _initialSupply = 1000000 * (10 ** uint256(DECIMALS));
+    uint256 private _maximusupply = 10000000 * (10 ** uint256(DECIMALS));
+    //uint256 constant _maximusupply = 1000000 * (10 ** uint256(_decimals));
     
     string public _name ;
     string public _symbol;
@@ -68,7 +71,7 @@ contract AREVEAToken is ERC20,Ownable{
    /**
      * @dev See {IERC20-totalSupply}.
      */
-    function maximusupply() public pure returns (uint256) {
+    function maximusupply() public view virtual returns (uint256) {
     return _maximusupply;
     }
     function totalSupply() public view virtual override returns (uint256) {
