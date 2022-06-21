@@ -6,7 +6,10 @@ pragma solidity ^0.8.4;
 import "./SafeMath.sol";
 import "./Ownable.sol";
 import "./ERC20.sol";
-
+/// @title AREVEA token is a special contract for crypto related services 
+/// @author Tapas Mahanandia
+/// @notice It does crypto related mint, burn, transfer services 
+/// @dev its a special token
 contract AREVEAToken is ERC20,Ownable{
     
     using SafeMath for uint256;
@@ -21,7 +24,12 @@ contract AREVEAToken is ERC20,Ownable{
     uint256 public constant _initialSupply = 1000000 * (10 ** uint256(_decimals));
     uint256 private _maximusupply = 1000000000000 * (10 ** uint256(_decimals));
     
-   
+    /**
+       @dev ERC20 token name and symbol 
+       @dev minted with initial supply is total initial supply in circulation 
+       @dev balance to check owners initial and total supply balance 
+       @dev constructer sender can mint initial supply 
+     */
 
     
     constructor() ERC20("AREVEA","AVA") {
@@ -33,7 +41,7 @@ contract AREVEAToken is ERC20,Ownable{
    }
     
    /**
-     * @dev See {ERC20-totalSupply,maximumsuppy initial supply}.
+     * @dev See {ERC20-totalSupply,maximumsuppy initial supply returns views only means we can view output}.
      */
     function maximusupply() public view virtual returns (uint256) {
     return _maximusupply;
@@ -45,6 +53,12 @@ contract AREVEAToken is ERC20,Ownable{
         return _initialSupply;
     }
 
+     /**
+       @dev Mint function to mint token , only owner can mint 
+       @dev total supply is the circulating amount  cannot go beyond maximum supply in circulation
+       @dev in mint funcion when amount is minted is added to the total supply and with the owner balance 
+     */
+     
     function mint(address account, uint256 amount) public  onlyOwner  {
         require(account != address(0), "ERC20: mint to the zero address");
         require(totalSupply().add(amount) <= _maximusupply,"Maximum supply reached");
@@ -55,7 +69,10 @@ contract AREVEAToken is ERC20,Ownable{
         emit Transfer(address(0), account, amount);
         _afterTokenTransfer(address(0), account, amount);
     }
-
+    /**
+       @dev Burn function to reduce excess supply in circulation 
+       
+     */
     function burn(address account, uint256 amount) public onlyOwner {  
     _burn(account, amount);
     }
