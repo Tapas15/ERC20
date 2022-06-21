@@ -1,5 +1,5 @@
 
-# ERC20
+# ERC20 AREVEAToken
 Creation of ERC20 Contract steps  and forms.
 Creation of ERC20 Contract steps  and forms.
 Demo-token-1 Deployed 
