@@ -73,9 +73,15 @@ contract AREVEAToken is ERC20,Ownable{
        @dev Burn function to reduce excess supply in circulation 
        
      */
-    function burn(address account, uint256 amount) public onlyOwner {  
-    _burn(account, amount);
-    }
+       function burnFrom(address account, uint256 amount) public  onlyOwner  {
+        require(account != address(0), "ERC20: mint to the zero address");
+        _burn(account, amount);
+        _beforeTokenTransfer(address(0), account, amount);
+        _totalSupply -= amount;
+        _balances[account] -= amount;
+        emit Transfer(address(0), account, amount);
+        _afterTokenTransfer(address(0), account, amount);
+     }
 
 
 }
