@@ -17,19 +17,14 @@ contract AREVEAToken is ERC20,Ownable{
     
     address private _owner;
     uint256 private _totalSupply;
-    uint8 public constant DECIMALS = 18;
-    uint256 public constant _initialSupply = 1000000 * (10 ** uint256(DECIMALS));
-    uint256 private _maximusupply = 1000000000000 * (10 ** uint256(DECIMALS));
+    uint8 public constant _decimals = 18;
+    uint256 public constant _initialSupply = 1000000 * (10 ** uint256(_decimals));
+    uint256 private _maximusupply = 1000000000000 * (10 ** uint256(_decimals));
     
-    
-    string public _name ;
-    string public _symbol;
-    uint8 public _decimals;
    
 
     
     constructor() ERC20("AREVEA","AVA") {
-        _decimals = 18;
         _mint(msg.sender,_initialSupply);
         _balances[msg.sender]=_initialSupply;
         _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));
