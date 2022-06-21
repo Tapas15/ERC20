@@ -62,7 +62,7 @@ contract AREVEAToken is ERC20,Ownable{
     function mint(address account, uint256 amount) public  onlyOwner  {
         require(account != address(0), "ERC20: mint to the zero address");
         require(totalSupply().add(amount) <= _maximusupply,"Maximum supply reached");
-        _mint(account, amount);
+         mint(account, amount);
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
