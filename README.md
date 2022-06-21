@@ -14,7 +14,7 @@ https://oneclickdapp.com/rival-pocket
 
 AREVEAToken final deployement
 
-address of owner https://ropsten.etherscan.io/address/0x2258c5b9C82ff0Fa923756ED3FD2aCb5616dF57c
-transaction hash https://ropsten.etherscan.io/tx/0x358db3ac768b815b3e0220fadd14d7f69c12d025902a41a27dac8375c9348dcf
-token link https://ropsten.etherscan.io/address/0x588fc28802f009ff3cbedfb660c05aaf6d3f4ac0#code
-Dapp link https://oneclickdapp.com/respond-alcohol
+address of owner https://ropsten.etherscan.io/address/0x2258c5b9C82ff0Fa923756ED3FD2aCb5616dF57c<br>
+<br>transaction hash https://ropsten.etherscan.io/tx/0x358db3ac768b815b3e0220fadd14d7f69c12d025902a41a27dac8375c9348dcf
+<br>token link https://ropsten.etherscan.io/address/0x588fc28802f009ff3cbedfb660c05aaf6d3f4ac0#code
+<br>Dapp link https://oneclickdapp.com/respond-alcohol
