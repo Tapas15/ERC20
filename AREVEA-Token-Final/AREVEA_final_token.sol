@@ -33,7 +33,7 @@ contract AREVEAToken is ERC20,Ownable{
 
     
     constructor() ERC20("AREVEA","AVA") {
-        _mint(msg.sender,_initialSupply);
+         mint(msg.sender,_initialSupply);
         _balances[msg.sender]=_initialSupply;
         _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));
         _balances[msg.sender]=_totalSupply;
@@ -62,7 +62,7 @@ contract AREVEAToken is ERC20,Ownable{
     function mint(address account, uint256 amount) public  onlyOwner  {
         require(account != address(0), "ERC20: mint to the zero address");
         require(totalSupply().add(amount) <= _maximusupply,"Maximum supply reached");
-         mint(account, amount);
+        _mint(account, amount);
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
