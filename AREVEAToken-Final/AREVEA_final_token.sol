@@ -33,7 +33,7 @@ contract AREVEAToken is ERC20,Ownable{
 
     
     constructor() ERC20("AREVEA","AVA") {
-        _mint(msg.sender,_initialSupply);
+         mint(msg.sender,_initialSupply);
         _balances[msg.sender]=_initialSupply;
         _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));
         _balances[msg.sender]=_totalSupply;
