@@ -61,28 +61,6 @@ spending approval
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Creation of ERC20 Contract steps  and forms.
 Creation of ERC20 Contract steps  and forms.
 Demo-token-1 Deployed 
@@ -95,7 +73,6 @@ https://ropsten.etherscan.io/token/0xd37d018814ff53a05a8c4358cd8cf1527bbe7a8f#ba
 <br>Dapps online link 
 https://oneclickdapp.com/rival-pocket
 
->>>>>>> 36919b103fa2d5c0c710f4bfb39b453b58af1c4c
 
 AREVEAToken final deployement
 
@@ -104,4 +81,4 @@ address of owner https://ropsten.etherscan.io/address/0x2258c5b9C82ff0Fa923756ED
 <br>token link https://ropsten.etherscan.io/address/0x588fc28802f009ff3cbedfb660c05aaf6d3f4ac0#code
 <br>Dapp link https://oneclickdapp.com/respond-alcohol
 
->>>>>>> 36919b103fa2d5c0c710f4bfb39b453b58af1c4c
+
