@@ -2,7 +2,6 @@
 
 pragma solidity ^0.8.4;
 
-
 import "./SafeMath.sol";
 import "./Ownable.sol";
 import "./ERC20.sol";
@@ -10,14 +9,22 @@ import "./ERC20.sol";
 /// @author Tapas Mahanandia
 /// @notice It does crypto related mint, burn, transfer services 
 /// @dev its a special token
-contract AREVEAToken is ERC20,Ownable{
-    
-    using SafeMath for uint256;
-    
-    mapping (address => uint256) private _balances;
 
-    mapping (address => mapping (address => uint256)) private _allowances;
+contract AREVEAToken is ERC20,Ownable{
+    /** 
+     @dev using safe math for mathmatical calculation 
+    */
+    using SafeMath for uint256;
+   /** 
+     @dev private balance is initialized with privat allowance 
+    */
+    mapping (address => uint256) private _balances;
     
+    mapping (address => mapping (address => uint256)) private _allowances;
+     /** 
+     @dev private owner ,total supply maximumsupply variable initialized 
+     @dev public constant decimals and initial supply initialized 
+    */
     address private _owner;
     uint256 private _totalSupply;
     uint8 public constant _decimals = 18;
@@ -27,8 +34,9 @@ contract AREVEAToken is ERC20,Ownable{
     /**
        @dev ERC20 token name and symbol 
        @dev minted with initial supply is total initial supply in circulation 
-       @dev balance to check owners initial and total supply balance 
-       @dev constructer sender can mint initial supply 
+       @dev balance to check owners initial supply
+       @dev initial supply is part of total supply 
+       @dev balance to check owners total supply   
      */
 
     
@@ -40,15 +48,21 @@ contract AREVEAToken is ERC20,Ownable{
         
    }
     
-   /**
-     * @dev See {ERC20-totalSupply,maximumsuppy initial supply returns views only means we can view output}.
+    /**
+     * @dev This is the function to give total maximumsupply in return
      */
     function maximusupply() public view virtual returns (uint256) {
     return _maximusupply;
     }
+   /**
+     * @dev This is the function to give totalsupply in return
+     */
     function totalSupply() public view virtual override returns (uint256) {
         return _totalSupply;
     }
+    /**
+     * @dev This is the function to give initialsupply in return
+     */
     function initialSupply() public view virtual returns (uint256) {
         return _initialSupply;
     }
