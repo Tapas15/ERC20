@@ -33,39 +33,39 @@ Token name – AREVEA
 Decimals -18
 
 Smart Contract Functionality 
-1)	How the contract works and steps and functionality 
-2)	Contract initialized with a function called the initial supply of 1000000 it is the contract creator or the initial owner created with an initial supply of amount. 
-3)	Contract has a Maximum supply which means the total supply, the total circulation of money cannot go beyond the max supply ex- 1 trillion is total circulation.
-4)	Name: is the token name and symbol is token symbol and decimal refers to 18 eths in circulation. 
-5)	How to check the owner(contract creator) initial balance 
+<br>1)	How the contract works and steps and functionality 
+<br>2)	Contract initialized with a function called the initial supply of 1000000 it is the contract creator or the initial owner created with an initial supply of amount. 
+<br>3)	Contract has a Maximum supply which means the total supply, the total circulation of money cannot go beyond the max supply ex- 1 trillion is total circulation.
+<br>4)	Name: is the token name and symbol is token symbol and decimal refers to 18 eths in circulation. 
+<br>5)	How to check the owner(contract creator) initial balance 
 Copy owner address - 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
 Paste in address field and press enter  – balanceOf -0x5B38Da6a701c568545dCfcB03FcB875f56beddC4  
-6)	Lets talk about mint and burn functionality – it is the function to generate coins and destroy coins in circulation. Only the owner can mint and burn
+<br>6)	Lets talk about mint and burn functionality – it is the function to generate coins and destroy coins in circulation. Only the owner can mint and burn
 Contract owner add: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4 
 Under captainship of owner anyone want to mint can burn.
-7)	Transfer: The contract owner can transfer to anyone, not another person 
-8)	Transfer-ownership: this will transfer the ownership to anyone 
-9)	Lets talk about Transfer from: in order to work this function owner must allow the amount to spend both spender and recipient allows using approve function in order to wotionrk well. pp
-10)	Increase and decrease the allowance is used to set increase or decrease spending approval
+<br>7)	Transfer: The contract owner can transfer to anyone, not another person 
+<br>8)	Transfer-ownership: this will transfer the ownership to anyone 
+<br>9)	Lets talk about Transfer from: in order to work this function owner must allow the amount to spend both spender and recipient allows using approve function in order to wotionrk well. pp
+<br>10)	Increase and decrease the allowance is used to set increase or decrease spending approval
 
 Smart contract function in brief;
-1)approve: function to approve spending and approve transferFrom, and it approves increase Allowance and Decreases allowance 
-2)burnFrom: it is the function to burn excess supply of token
-3) increase Allowance: it is a function to increase the allowance for spending.
-4) Decreases allowance:- it is a function to decrease allowance for spending 
-5)mint: it is the function to generate supply of tokens as needed.
-6)transfer: it is the function to direct transfer tokens 
-7)transferFrom: it is the function to transfer between account after approve function
-8)Transfer Ownership: it is the function to transfer ownership
-9)Decimals: gives 18 decimal value 
-10)Initialsupply: it is the initial supply from beginning
-11)allowance function to check the allowance balance between spender and owner
-12)balanceOf: it gives the total balance of accounts.
-13)maximumsupply: gives the total maximum supply of tokens 
-14)name – token name
-15)owner- contract owner
-16)symbol- token symbol
-17)totalsupply-gives the total supply in circulation 
+<br>1)approve: function to approve spending and approve transferFrom, and it approves increase Allowance and Decreases allowance 
+<br>2)burnFrom: it is the function to burn excess supply of token
+<br>3) increase Allowance: it is a function to increase the allowance for spending.
+<br>4) Decreases allowance:- it is a function to decrease allowance for spending 
+<br>5)mint: it is the function to generate supply of tokens as needed.
+<br>6)transfer: it is the function to direct transfer tokens 
+<br>7)transferFrom: it is the function to transfer between account after approve function
+<br>8)Transfer Ownership: it is the function to transfer ownership
+<br>9)Decimals: gives 18 decimal value 
+<br>10)Initialsupply: it is the initial supply from beginning
+<br>11)allowance function to check the allowance balance between spender and owner
+<br>12)balanceOf: it gives the total balance of accounts.
+<br>13)maximumsupply: gives the total maximum supply of tokens 
+<br>14)name – token name
+<br>15)owner- contract owner
+<br>16)symbol- token symbol
+<br>17)totalsupply-gives the total supply in circulation 
 
 AREVEAToken final deployement
 
