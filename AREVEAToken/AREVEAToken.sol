@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.4;
 
 import "./SafeMath.sol";
@@ -25,11 +24,11 @@ contract AREVEAToken is ERC20,Ownable{
      @dev private owner ,total supply maximumsupply variable initialized 
      @dev public constant decimals and initial supply initialized 
     */
-    address private _owner;
-    uint256 private _totalSupply;
-    uint8 public constant _decimals = 18;
-    uint256 public constant _initialSupply = 1000000 * (10 ** uint256(_decimals));
-    uint256 private _maximusupply = 1000000000000 * (10 ** uint256(_decimals));
+    address private _owner; // it is the address of owner 
+    uint256 private _totalSupply; // it is the total supply variable is init
+    uint8 public constant _decimals = 18; // it it the decimal value 
+    uint256 public constant _initialSupply = 1000000 * (10 ** uint256(_decimals)); // this is initial supply
+    uint256 private _maximusupply = 1000000000000 * (10 ** uint256(_decimals)); // this is maximum supply 
     
     /**
        @dev ERC20 token name and symbol 
@@ -37,16 +36,14 @@ contract AREVEAToken is ERC20,Ownable{
        @dev balance to check owners initial supply
        @dev initial supply is part of total supply 
        @dev balance to check owners total supply   
-     */
-
-    
+     */ 
     constructor() ERC20("AREVEA","AVA") {
          mint(msg.sender,_initialSupply);
         _balances[msg.sender]=_initialSupply;
         _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));
         _balances[msg.sender]=_totalSupply;
         
-   }
+       }
     
     /**
      * @dev This is the function to give total maximumsupply in return
@@ -55,13 +52,13 @@ contract AREVEAToken is ERC20,Ownable{
     return _maximusupply;
     }
    /**
-     * @dev This is the function to give total totalsupply in return
+     * @dev This is the function to give totalsupply in return
      */
     function totalSupply() public view virtual override returns (uint256) {
         return _totalSupply;
     }
     /**
-     * @dev This is the function to give initial supply in return
+     * @dev This is the function to give initialsupply in return
      */
     function initialSupply() public view virtual returns (uint256) {
         return _initialSupply;
@@ -87,8 +84,10 @@ contract AREVEAToken is ERC20,Ownable{
        @dev Burn function to reduce excess supply in circulation 
        
      */
-       function burnFrom(address account, uint256 amount) public  onlyOwner  {
+    
+       function burnFrom(address account, uint256 amount) public virtual    {
         require(account != address(0), "ERC20: mint to the zero address");
+       // require(amount <= allowance[account][msg.sender]);
         _burn(account, amount);
         _beforeTokenTransfer(address(0), account, amount);
         _totalSupply -= amount;
