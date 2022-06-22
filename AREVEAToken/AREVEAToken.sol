@@ -55,13 +55,13 @@ contract AREVEAToken is ERC20,Ownable{
     return _maximusupply;
     }
    /**
-     * @dev This is the function to give totalsupply in return
+     * @dev This is the function to give total totalsupply in return
      */
     function totalSupply() public view virtual override returns (uint256) {
         return _totalSupply;
     }
     /**
-     * @dev This is the function to give initialsupply in return
+     * @dev This is the function to give initial supply in return
      */
     function initialSupply() public view virtual returns (uint256) {
         return _initialSupply;
