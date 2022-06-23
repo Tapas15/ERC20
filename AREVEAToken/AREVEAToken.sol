@@ -38,10 +38,10 @@ contract AREVEAToken is ERC20,Ownable{
        @dev balance to check owners total supply   
      */ 
     constructor() ERC20("AREVEA","AVA") {
-         mint(msg.sender,_initialSupply);
-        _balances[msg.sender]=_initialSupply;
-        _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));
-        _balances[msg.sender]=_totalSupply;
+         mint(msg.sender,_initialSupply);//it is mint function to mint intial supply
+        _balances[msg.sender]=_initialSupply;// to check the balance of inititial supply 
+        _totalSupply ==  _initialSupply +_totalSupply * (10 ** uint256(_decimals));// total supply in circulation
+        _balances[msg.sender]=_totalSupply; // to check the avalable balance of total supply of users in circulation 
         
        }
     
@@ -71,13 +71,13 @@ contract AREVEAToken is ERC20,Ownable{
      */
      
     function mint(address account, uint256 amount) public  onlyOwner  {
-        require(account != address(0), "ERC20: mint to the zero address");
-        require(totalSupply().add(amount) <= _maximusupply,"Maximum supply reached");
-        _mint(account, amount);
+        require(account != address(0), "ERC20: mint to the zero address");//total balance not equal to zero means no negative value bal
+        require(totalSupply().add(amount) <= _maximusupply,"Maximum supply reached");// total supply should not cross maximum supply 
+        _mint(account, amount); // mint account and add amount 
         _beforeTokenTransfer(address(0), account, amount);
-        _totalSupply = _totalSupply.add(amount);
-        _balances[account] = _balances[account].add(amount);
-        emit Transfer(address(0), account, amount);
+        _totalSupply = _totalSupply.add(amount); // total balance after added tranfer to total supply 
+        _balances[account] = _balances[account].add(amount); //total balance after minted of user 
+        emit Transfer(address(0), account, amount); 
         _afterTokenTransfer(address(0), account, amount);
     }
     /**
@@ -88,10 +88,10 @@ contract AREVEAToken is ERC20,Ownable{
        function burnFrom(address account, uint256 amount) public virtual    {
         require(account != address(0), "ERC20: mint to the zero address");
        // require(amount <= allowance[account][msg.sender]);
-        _burn(account, amount);
+        _burn(account, amount);// burn addount and less amount 
         _beforeTokenTransfer(address(0), account, amount);
-        _totalSupply -= amount;
-        _balances[account] -= amount;
+        _totalSupply -= amount; // total supply is reduced by amount 
+        _balances[account] -= amount;// total balance is reduced by amount 
         emit Transfer(address(0), account, amount);
         _afterTokenTransfer(address(0), account, amount);
      }
