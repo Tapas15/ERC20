@@ -1,6 +1,6 @@
 
 # ERC20 AREVEAToken
-
+## Table of contents
 AREVEAToken
 Table of contents
 Decentralized coin
