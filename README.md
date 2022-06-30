@@ -1,11 +1,11 @@
 
 # ERC20 AREVEAToken
 ## Table of contents
-AREVEAToken
-Table of contents
-Decentralized coin
-Arevea Token
-Smart Contract Functionality 
+### Decentralized coin
+### Arevea Token
+### Smart Contract Functionality 
+### Disclaimer 
+
 Disclaimer 
 Decentralized coin:- We strive to help communities with token ERC20(Decentralized applications) & other crypto-related media. ARE ERC20 
 Are crypto-related services help to build the community for their platform to promote their product and business. It is becoming the most powerful tool for blockchain development and use cases. We help bring the project to the masses using a specialized marketing strategy that will help build a community for good. 
