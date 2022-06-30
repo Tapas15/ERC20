@@ -68,9 +68,10 @@ Smart contract function in brief;
 
 AREVEAToken final deployement
 
-address of owner https://ropsten.etherscan.io/address/0x2258c5b9C82ff0Fa923756ED3FD2aCb5616dF57c
-<br>transaction hash https://ropsten.etherscan.io/tx/0x358db3ac768b815b3e0220fadd14d7f69c12d025902a41a27dac8375c9348dcf
-<br>token link https://ropsten.etherscan.io/address/0x588fc28802f009ff3cbedfb660c05aaf6d3f4ac0#code
-<br>Dapp link https://oneclickdapp.com/respond-alcohol
+Disclaimer:- This section is intentionally blank. 
+<br>Contract Creation Address:- https://rinkeby.etherscan.io/tx/0xed027defa0ba27b0486907d63a1122bce28d5ab41535e1e2c6b4d9935dc23a45
+<br>Contract Addres:- https://rinkeby.etherscan.io/address/0xd37d018814ff53a05a8c4358cd8cf1527bbe7a8f
+<br>Token  Address:-https://rinkeby.etherscan.io/token/0xd37d018814ff53a05a8c4358cd8cf1527bbe7a8f
+<br>Dapp- https://oneclickdapp.com/carlo-sierra
 
 
