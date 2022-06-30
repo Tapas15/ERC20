@@ -23,12 +23,13 @@ Contract deployed in Ropsten test network
 <br>ipfs://96650a408e61429fbc4608d334d8376ff7089c07b12a30583464e951e4f95eaa
 
 
-Initial supply - 1000000
-Total supply – between initial and max supply 
-Max supply  - 1000000000000 
-Symbol – AVA
-Token name – AREVEA
-Decimals -18
+##### Initial supply - 1000000
+##### Total supply – between initial and max supply 
+##### Max supply  - 1000000000000 
+##### Symbol – AVA
+##### Token name – AREVEA
+##### Decimals -18
+
 
 Smart Contract Functionality 
 <br>1)	How the contract works and steps and functionality 
